@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     title.style.opacity = '0';
     title.style.transform = 'translateY(10px)'; 
     setTimeout(() => {
-        title.style.transition = 'opacity 0.5s ease-in, transform 0.5s ease-in'; 
+        title.style.transition = 'opacity 0.5s ease-in, transform 0.5s ease'; 
         title.style.opacity = '1';
         title.style.transform = 'translateY(0)'; 
     }, 0);
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     subtitle.style.opacity = '0';
     subtitle.style.transform = 'translateY(10px)'; 
     setTimeout(() => {
-        subtitle.style.transition = 'opacity 0.5s ease-in, transform 0.5s ease-in'; 
+        subtitle.style.transition = 'opacity 0.5s ease-in, transform 0.5s ease'; 
         subtitle.style.opacity = '1';
         subtitle.style.transform = 'translateY(0)'; 
     }, 50); 
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
     disnetdev.style.opacity = '0';
     disnetdev.style.transform = 'translateY(10px)'; 
     setTimeout(() => {
-        disnetdev.style.transition = 'opacity 0.5s ease-in, transform 0.5s ease-in'; 
+        disnetdev.style.transition = 'opacity 0.5s ease-in, transform 0.5s ease'; 
         disnetdev.style.opacity = '1';
         disnetdev.style.transform = 'translateY(0)'; 
     }, 100);
@@ -38,4 +38,15 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.color = '';
         });
     });
+
+const techStackIcons = document.querySelectorAll('.tech-stack-icon');
+techStackIcons.forEach(icon => {
+    icon.style.transition = 'transform 0.3s ease'; 
+    icon.addEventListener('mouseover', function() {
+        this.style.transform = 'scale(1.1)'; 
+    });
+    icon.addEventListener('mouseout', function() {
+        this.style.transform = 'scale(1)'; 
+    });
+});
 }); 

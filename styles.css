@@ -20,6 +20,17 @@ body {
     background-attachment: fixed;
 }
 
+.tech-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tech-stack-icon {
+    height: 100px;
+    margin: 20px;
+}
+
 .disnetdev {
     font-style: italic;
     line-height: 0.4;
