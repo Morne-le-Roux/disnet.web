@@ -40,13 +40,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 const techStackIcons = document.querySelectorAll('.tech-stack-icon');
-techStackIcons.forEach(icon => {
+const techStackIconTexts = document.querySelectorAll('.tech-stack-icon-text');
+
+techStackIcons.forEach((icon, index) => {
     icon.style.transition = 'transform 0.3s ease'; 
+    techStackIconTexts[index].style.opacity = '0'; // Initially hide the text
+    techStackIconTexts[index].style.transition = 'opacity 0.3s ease'; // Add transition for text
+
     icon.addEventListener('mouseover', function() {
         this.style.transform = 'scale(1.1)'; 
+        techStackIconTexts[index].style.opacity = '1'; // Show text on hover
     });
     icon.addEventListener('mouseout', function() {
         this.style.transform = 'scale(1)'; 
+        techStackIconTexts[index].style.opacity = '0'; // Hide text when not hovering
     });
 });
 }); 
