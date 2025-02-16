@@ -16,8 +16,8 @@ jobs:
       - name: Upload to FTP server
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
-          ftp-server: ftp://disnetdev.co.za
-          ftp-username: ${{ secrets.FTP_USERNAME }}
-          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          server: ftp://disnetdev.co.za
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./disnetdev.co.za/public_html/
-          git-ftp-args: --insecure # Optional, use if needed
+          security: --insecure # Optional, use if needed
