@@ -11,10 +11,10 @@ jobs:
 
         steps:
         - name: Checkout repository
-        uses: actions/checkout@v2
+            uses: actions/checkout@v2
 
         - name: Upload to FTP server
-        uses: SamKirkland/FTP-Deploy-Action@4.2.0
+            uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
             ftp-server: ftp://disnetdev.co.za
             ftp-username: ${{ secrets.FTP_USERNAME }}
