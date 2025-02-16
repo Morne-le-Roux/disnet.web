@@ -19,4 +19,5 @@ jobs:
           server: ftp://disnetdev.co.za
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: /disnetdev.co.za/public_html/
+          local-dir: ./ # Adjust this to the correct directory you want to upload
+          server-dir: /disnetdev.co.za/public_html/ # Specify the server directory
