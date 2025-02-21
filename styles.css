@@ -134,3 +134,50 @@ a:hover {
 .content {
     padding: 20px;
 }
+
+.personal-projects {
+    padding: 10px;
+}
+
+.personal-project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.personal-project-card {
+    flex: 1 1 30%;
+    margin: 0px 20px 0px 0px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    padding: 0px 20px 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.about-container {
+    flex-wrap: wrap;
+    color: #ffffff;
+}
+
+.about-me {
+    margin: 50px 10px 50px 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.about-disnetdev {
+    flex: 1 1 45%; 
+    margin: 10px;
+    margin-left: auto; 
+    margin: 10px 10px 20px 10px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .about-me, .about-disnetdev {
+        flex: 1 1 100%; 
+        text-align: center; 
+    }
+}
+
