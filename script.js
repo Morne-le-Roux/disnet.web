@@ -42,8 +42,8 @@ techStackIcons.forEach((icon, index) => {
 });
     
     
-    const personalProjectCards = document.querySelectorAll('.personal-project-card');
-    personalProjectCards.forEach(card => {
+    const projectCards = document.querySelectorAll('.personal-project-card, .disnetdev-project-card-fishroom, .disnetdev-project-card-spaza');
+    projectCards.forEach(card => {
         card.addEventListener('mouseover', function() {
             this.style.transition = 'transform 0.5s ease, box-shadow 0.5s ease';
             this.style.transform = 'scale(1.05)';
@@ -56,5 +56,6 @@ techStackIcons.forEach((icon, index) => {
         });
     });
 
-    
+  
+
 }); 
