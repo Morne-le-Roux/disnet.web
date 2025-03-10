@@ -56,6 +56,8 @@ techStackIcons.forEach((icon, index) => {
         });
     });
 
+    document.getElementById("currentYear").innerHTML = new Date().getFullYear();
+
   
 
-}); 
+});
