@@ -66,14 +66,19 @@ body {
 }
 
 .hero-title {
-    font-size: 2.5rem;
+    font-size: 4.5rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
     color: #000;
 }
 
 .hero-subtitle {
-    font-size: 1.25rem;
+    font-size: 2.25rem;
+    color: #666;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
     color: #666;
 }
 
