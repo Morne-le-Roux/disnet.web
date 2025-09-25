@@ -1,4 +1,12 @@
-/* Reset default styles */
+:root {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #1a1a1a;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --accent: #646cff;
+    --accent-hover: #535bf2;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,235 +14,261 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
     line-height: 1.6;
-    color: #000;
-    background: linear-gradient(rgba(255, 255, 255, 0.726), rgba(255, 255, 255, 0.74)), url('assets/02.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    min-height: 100vh;
 }
 
-/* Navbar styles */
-.navbar {
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 1rem 2rem;
+header {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    width: 100%;
+    background-color: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
     z-index: 1000;
 }
 
-.nav-brand {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-decoration: none;
-    color: inherit;
-    transition: opacity 0.2s ease;
-}
-
-.nav-brand:hover {
-    opacity: 0.8;
-}
-
-.nav-logo {
-    width: 32px;
-    height: 32px;
-}
-
-.nav-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #000;
-}
-
-/* Content styles */
-.content {
-    margin-top: 80px; /* Add space for fixed navbar */
-    padding: 2rem;
+nav {
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Hero section */
-.hero {
-    text-align: center;
-    padding: 3rem 0;
-    line-height: 1;
-    margin-bottom: 1rem;
-}
-
-.hero-title {
-    font-size: 4.5rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    color: #000;
-}
-
-.hero-subtitle {
-    font-size: 2.25rem;
-    color: #666;
-}
-
-.hero-subtitle {
-    font-size: 1.5rem;
-    color: #666;
-}
-
-/* Tech Stack section */
-.tech-stack {
-    text-align: center;
-    padding: 2rem 0;
-    margin-bottom: 3rem;
-}
-
-.tech-tags {
+    margin: 0 auto;
+    padding: 1rem 2rem;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+section {
+    padding: 6rem 0;
+}
+
+#hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-/* Projects section */
-.projects {
-    padding: 2rem 0;
-}
-
-.section-title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: #000;
+    align-items: center;
     text-align: center;
 }
 
-.projects-grid {
+h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, var(--accent), var(--accent-hover));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+}
+
+.project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    padding: 1rem;
+    margin-top: 2rem;
 }
 
-/* Project card styles */
 .project-card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+    background-color: var(--bg-secondary);
+    padding: 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.project-image {
-    width: 100%;
-    position: relative;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
-    overflow: hidden;
-}
-
-.project-preview {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.project-content {
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.project-title {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: #000;
-}
-
-.project-description {
-    color: #000;
+.project-card h3 {
+    color: var(--accent);
     margin-bottom: 1rem;
-    line-height: 1.5;
-    flex-grow: 1;
-}
-
-.project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.tag {
-    background: #f0f0f0;
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.875rem;
-    color: #666;
-}
-
-.project-links {
-    display: flex;
-    justify-content: space-between;
-    margin-top: auto;
 }
 
 .project-link {
     display: inline-block;
-    color: #4A90E2;
+    margin-top: 1rem;
+    color: var(--accent);
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.2s ease;
 }
 
 .project-link:hover {
-    color: #800099;
+    color: var(--accent-hover);
 }
 
-/* Footer styles */
-.footer {
-    padding: 2rem;
+.contact-links {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--accent);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    background-color: var(--accent);
+    color: var(--bg-primary);
+}
+
+footer {
     text-align: center;
-    background-color: #f5f5f5;
-    margin-top: auto;
+    padding: 2rem;
+    color: var(--text-secondary);
+    background-color: var(--bg-secondary);
 }
 
-.footer hr {
-    margin-bottom: 1rem;
-    border: none;
-    border-top: 1px solid #ddd;
-}
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
-    .content {
-        padding: 1rem;
+    nav {
+        flex-direction: column;
+        gap: 1rem;
     }
-    
-    .hero-title {
-        font-size: 2rem;
+
+    nav ul {
+        gap: 1rem;
     }
-    
-    .hero-subtitle {
-        font-size: 1.1rem;
+
+    h1 {
+        font-size: 3rem;
     }
-    
-    .project-image {
-        height: 180px;
+
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
     }
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.tech-item {
+    background-color: var(--bg-secondary);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-color: var(--accent);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.project-link {
+    display: inline-block;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--accent);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: var(--accent);
+    color: var(--bg-primary);
+}
+
+.footer-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--accent);
+}
+
+.policy-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.policy-content h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.policy-content ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+.policy-content li {
+    margin-bottom: 0.5rem;
+}
+
+.policy-content a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.policy-content a:hover {
+    text-decoration: underline;
 }

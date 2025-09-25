@@ -3,98 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DisNetDev</title>
-    <link rel="preload" as="image" href="assets/02.jpg">
+    <title>DisNetDev | Morné le Roux</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <nav class="navbar">
-        <a href="/" class="nav-brand">
-            <img src="assets/logo.png" alt="DisNetDev Logo" class="nav-logo">
-            <span class="nav-title">DisNetDev</span>
-        </a>
-    </nav>
+    <header>
+        <nav>
+            <div class="logo">DisNetDev</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#tech-stack">Tech Stack</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#upcoming">Upcoming</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="content">
-        <section class="hero">
-            <h1 class="hero-title">DisNetDev Software</h1>
-            <p class="hero-subtitle">Morné le Roux</p>
+    <main>
+        <section id="hero">
+            <h1>Morné le Roux</h1>
+            <p class="subtitle">Full Stack Developer</p>
         </section>
 
-       
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I'm a full stack developer passionate about creating useful and engaging applications. Currently, I focus on developing Android applications that solve real-world problems and enhance user experiences.</p>
+        </section>
 
-        <section class="projects">
-            <h2 class="section-title">Live Products</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/feature2.png" alt="Fishroom App Preview" class="project-preview">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Fishroom</h3>
-                        <p class="project-description">A comprehensive aquarium log keeping application designed for aquarium enthusiasts. Track water parameters, maintenance schedules, and fish health all in one place.</p>
-                        <a href="https://play.google.com/store/apps/details?id=co.za.disnetdev.fishroom&pli=1" class="project-link" target="_blank">Google Play</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/placeholder.jpg" alt="Placeholder App Preview" class="project-preview">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Placeholder</h3>
-                        <p class="project-description">A family-focused household chore tracking app with a central dashboard. Family members can assign tasks to each other and display them on a shared dashboard in their home.</p>
-                        <div class="project-links">
-                            <a href="https://play.google.com/store/apps/details?id=co.za.disnetdev.placeholder" class="project-link" target="_blank">Google Play</a>
-                            <a href="https://github.com/Morne-le-Roux/placeholder_app" class="project-link" target="_blank">GitHub</a>
-                        </div>
-                    </div>
-                </div>
+        <section id="tech-stack">
+            <h2>Tech Stack</h2>
+            <div class="tech-grid">
+                <div class="tech-item">Flutter</div>
+                <div class="tech-item">Dart</div>
+                <div class="tech-item">C#</div>
+                <div class="tech-item">HTML</div>
+                <div class="tech-item">CSS</div>
+                <div class="tech-item">JavaScript</div>
+                <div class="tech-item">Python</div>
+                <div class="tech-item">Node.js</div>
+                <div class="tech-item">.Net</div>
+                <div class="tech-item">Supabase (PostgreSQL)</div>
+                <div class="tech-item">Pocketbase (SQLite)</div>
             </div>
+        </section>
 
-            <h2 class="section-title" style="margin-top: 3rem;">Upcoming Projects</h2>
-            <div class="projects-grid">
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="project-grid">
                 <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/spaza.png" alt="Spaza App Preview" class="project-preview">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Spaza</h3>
-                        <p class="project-description">A simple inventory management and point-of-sale system designed for small businesses. Streamline your operations with real-time stock tracking, sales analytics and more.</p>
+                    <img src="assets/feature2.png" alt="Fishroom App Screenshot" class="project-image">
+                    <h3>Fishroom</h3>
+                    <p>An app for aquarium hobbyists to log entries and share pictures of their tanks with the community.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Play Store</a>
+                        <a href="#" class="project-link">GitHub</a>
                     </div>
                 </div>
-
                 <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/clickncluck-preview.svg" alt="Clickety App Preview" class="project-preview">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Clickety</h3>
-                        <p class="project-description">An addictive clicker idle game where players tap to earn points, purchase upgrades, and compete for the top spot on the global leaderboard.</p>
-                        <a href="https://github.com/Morne-le-Roux/clickety" class="project-link" target="_blank">GitHub</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/absentry-preview.svg" alt="Absentry App Preview" class="project-preview">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Absentry</h3>
-                        <p class="project-description">An efficient student attendance tracking system with comprehensive reporting capabilities. Monitor attendance patterns and generate detailed reports for better decision-making.</p>
-                        <a href="https://github.com/Morne-le-Roux/AbSentry" class="project-link" target="_blank">GitHub</a>
+                    <img src="assets/placeholder.jpg" alt="Placeholder App Screenshot" class="project-image">
+                    <h3>Placeholder</h3>
+                    <p>A family task management app that allows families to assign and track tasks for other family members, viewable on a dashboard for tablets.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Play Store</a>
+                        <a href="#" class="project-link">GitHub</a>
                     </div>
                 </div>
             </div>
         </section>
-    </div>
 
-    <footer class="footer">
-        <hr>
-        <p>&copy; <span id="currentYear"></span> DisNetDev. All rights reserved. | <a href="/privacy-policy.html">Privacy Policy</a></p>
+        <section id="upcoming">
+            <h2>Upcoming Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="assets/spaza.png" alt="Spaza App Screenshot" class="project-image">
+                    <h3>Spaza</h3>
+                    <p>Spaza is a lightweight inventory and point-of-sale app built for mobile devices. Designed for small retailers and
+                    traders, it delivers fast checkouts, simple stock tracking, and clear daily sales info — all with zero fuss and minimal
+                    setup.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Coming Soon</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Clickety App Screenshot" class="project-image">
+                    <h3>Clickety</h3>
+                    <p>Tap your way to the top in Clickety. Buy upgrades that auto-click for you, boost your score, and compete on the global
+                    leaderboard.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Coming Soon</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Absentry App Screenshot" class="project-image">
+                    <h3>Absentry</h3>
+                    <p>Absentry is a simple, teacher-focused attendance tracker that makes taking roll quick and painless. Designed for
+                    classroom use, Absentry lets you mark presence with a tap or quick keystroke, track late arrivals and excused absences,
+                    and generate accurate class reports in Excel format.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Coming Soon</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Get in Touch</h2>
+            <p>Interested in working together? Let's connect!</p>
+            <div class="contact-links">
+                <a href="mailto:morne@disnetdev.co.za" class="contact-link">Email</a>
+                <a href="https://www.linkedin.com/in/morne-le-roux" target="_blank" class="contact-link">LinkedIn</a>
+                <a href="https://github.com/Morne-le-Roux" target="_blank" class="contact-link">GitHub</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> DisNetDev. All rights reserved. | <a href="privacy-policy.html" class="footer-link">Privacy Policy</a></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
