@@ -83,6 +83,7 @@ h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
     background: linear-gradient(45deg, var(--accent), var(--accent-hover));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -272,3 +273,30 @@ footer {
 .policy-content a:hover {
     text-decoration: underline;
 }
+
+/* Reveal-on-scroll animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px) scale(0.995);
+    transition: opacity 600ms cubic-bezier(.2,.9,.2,1), transform 600ms cubic-bezier(.2,.9,.2,1);
+    will-change: opacity, transform;
+}
+
+.reveal.revealed {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Horizontal variants */
+.reveal-left { transform: translateX(-20px) scale(0.995); }
+.reveal-right { transform: translateX(20px) scale(0.995); }
+.reveal-left.revealed, .reveal-right.revealed { transform: translateX(0) scale(1); }
+
+/* Stagger helper: elements can set data-delay (ms) to offset their reveal */
+[data-delay] { transition-delay: 0ms; }
+[data-delay].revealed { transition-delay: var(--delay, 0ms); }
+
+/* Slight variant for project-card to make it feel snappier */
+.project-card.reveal { transform: translateY(18px) scale(0.995); }
+.project-card.reveal.revealed { transition-duration: 520ms; }
+
