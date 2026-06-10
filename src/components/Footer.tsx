@@ -1,28 +1,17 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-slate-400">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+    <footer className="bg-black border-t border-white/10 text-white/50">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
           <div>
-            <Link href="/" className="flex items-center gap-2.5 mb-3">
-              <Image
-                src="/logo.png"
-                alt="DisNetDev Software logo"
-                width={36}
-                height={36}
-                className="rounded"
-                unoptimized
-              />
-              <span className="text-sm font-bold tracking-tight leading-none">
-                <span className="text-white">DisNetDev</span>
-                <span className="block text-xs font-normal text-slate-400">
-                  Software
-                </span>
-              </span>
-            </Link>
+            <p className="text-3xl font-black tracking-widest uppercase text-white mb-1">
+              DND
+            </p>
+            <p className="text-xs font-semibold tracking-[0.25em] uppercase text-white/40 mb-4">
+              DisNetDev Software
+            </p>
             <p className="text-sm leading-relaxed">
               Professional web design, email hosting, and custom software
               solutions for businesses of all sizes.
@@ -30,10 +19,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-white text-sm font-semibold uppercase tracking-wider mb-4">
+            <h3 className="text-white text-xs font-bold tracking-[0.3em] uppercase mb-5">
               Services
             </h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-3 text-sm">
               <li>
                 <Link
                   href="#services"
@@ -62,10 +51,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-white text-sm font-semibold uppercase tracking-wider mb-4">
+            <h3 className="text-white text-xs font-bold tracking-[0.3em] uppercase mb-5">
               Company
             </h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-3 text-sm">
               <li>
                 <Link
                   href="#about"
@@ -82,12 +71,21 @@ export default function Footer() {
                   Contact
                 </Link>
               </li>
+              <li>
+                <a
+                  href="mailto:info@disnetdev.co.za"
+                  className="hover:text-white transition-colors"
+                >
+                  info@disnetdev.co.za
+                </a>
+              </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-slate-800 mt-10 pt-8 text-sm text-center">
-          © {new Date().getFullYear()} DisNetDev Software. All rights reserved.
+        <div className="border-t border-white/10 pt-8 text-xs text-center tracking-widest uppercase text-white/30">
+          &copy; {new Date().getFullYear()} DisNetDev Software. All rights
+          reserved.
         </div>
       </div>
     </footer>

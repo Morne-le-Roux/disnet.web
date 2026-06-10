@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const geist = Geist({
-  variable: "--font-geist-sans",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
-  title: "DisNetDev Software — Web Design, Email Hosting & Custom Software",
+  title: "DisNetDev Software — Design It. Host It. Grow It.",
   description:
-    "DisNetDev Software specializes in website design, professional email hosting, and custom software solutions for businesses of all sizes.",
+    "DisNetDev Software builds beautiful websites, provides powerful hosting, and creates custom software — everything your business needs to grow online.",
 };
 
 export default function RootLayout({
@@ -21,8 +22,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geist.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-white text-slate-900">
+    <html lang="en" className={`${montserrat.variable} h-full antialiased`}>
+      <body className="min-h-full flex flex-col bg-black text-white">
         <Navbar />
         {children}
         <Footer />
