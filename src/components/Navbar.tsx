@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 const navLinks = [
@@ -23,9 +24,13 @@ export default function Navbar() {
             className="flex items-center gap-3"
             onClick={() => setIsOpen(false)}
           >
-            <span className="text-2xl font-black tracking-widest text-white uppercase">
-              DND
-            </span>
+            <Image
+              src="/favicon.svg"
+              alt="DisNetDev logo"
+              width={36}
+              height={36}
+              priority
+            />
             <span className="hidden sm:block w-px h-5 bg-white/30" />
             <span className="hidden sm:block text-xs font-semibold tracking-[0.2em] uppercase text-white/60">
               DisNetDev
